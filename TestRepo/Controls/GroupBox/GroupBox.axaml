@@ -1,0 +1,19 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 xmlns:vm="using:TestRepo"
+			 x:Class="TestRepo.GroupBox"
+			 x:DataType="vm:GroupBoxViewModel">
+	<Grid RowDefinitions="Auto, Auto">
+		<StackPanel Background="{DynamicResource SystemControlBackgroundAccentBrush}"
+					Orientation="Horizontal">
+			<Label Content="{Binding Text}" VerticalAlignment="Center"
+				   VerticalContentAlignment="Center"></Label>
+			<ContentPresenter Content="{Binding Header}" 
+							Margin="5,0,0,0"/>
+		</StackPanel>
+		<ContentPresenter Content="{Binding Content}" Grid.Row="1" />
+	</Grid>
+</UserControl>

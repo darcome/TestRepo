@@ -1,0 +1,18 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:local="clr-namespace:TestRepo"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 xmlns:vm="using:TestRepo"
+             x:Class="TestRepo.MyControl"
+			 x:DataType="vm:MyControlViewModel">
+	<local:GroupBox Text="TEST">
+		<local:GroupBox.Content>
+			<Grid RowDefinitions="Auto, *">
+				<TextBox Grid.Row="0" FontSize="18"
+						 Text="{Binding NameFilter}"></TextBox>
+			</Grid>
+		</local:GroupBox.Content>
+	</local:GroupBox>
+</UserControl>
