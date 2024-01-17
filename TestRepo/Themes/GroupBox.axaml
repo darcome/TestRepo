@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:conntrols="clr-namespace:TestRepo.Conntrols">
+    <ControlTheme x:Key="{x:Type conntrols:GroupBox}" TargetType="conntrols:GroupBox">
+        <Setter Property="BorderBrush" Value="Gray" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border Width="{TemplateBinding Width}"
+                        Height="{TemplateBinding Height}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}"
+                        Margin="{TemplateBinding Margin}"
+                        Padding="{TemplateBinding Padding}">
+                <DockPanel>
+                    <ContentPresenter Content="{TemplateBinding Header}" 
+                                      ContentTemplate="{TemplateBinding HeaderTemplate}"
+                                      TextElement.FontSize="20"
+                                      Foreground="{DynamicResource SystemAccentColor}"
+                                      DockPanel.Dock="Top" />
+                    <Separator DockPanel.Dock="Top" Margin="0,2" Background="Gray" Height="1"></Separator>
+                    <ContentPresenter Content="{TemplateBinding Content}" 
+                                      ContentTemplate="{TemplateBinding ContentTemplate}" />
+                </DockPanel>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+        
+    </ControlTheme>
+</ResourceDictionary>
